@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+	<meta charset="utf-8" />
+	<meta name="author" content="alexh" />
+	<meta name="description" content="Tisch-Moderation." />
+	<meta name=viewport content="width=device-width, initial-scale=1" />
+	<title>Tisch-Moderation</title>
+	<style>
+		.column input, .column label, .column div, .column textarea, .column select, .column button {
+			display: block;
+			width: 100%;
+			margin-top: 2ch;
+		}
+		/*.column select {
+			margin-top:0;
+		}*/
+		/*.column:first-child {
+			margin-top: 0;
+		}*/
+		select#wunsch_ws {
+			width: 100px;
+			display: block;
+		}
+		textarea {
+			min-height: 48vh;
+		}
+		div.column {
+			/*border: solid thin gray;*/
+			display: inline-block;
+			vertical-align: top;
+			margin: 1%;
+			height: 70vh;
+			margin-top: 2ch;
+		}
+		#left {
+			width: 100px;
+		}
+		#center-l {
+			width: 275px;
+		}
+		#center-r {
+			width: 350px;
+		}
+		#right {
+			width: 125px;
+			overflow: auto;
+			border: solid thin;
+		}
+		#image-select {
+			max-height: 54vh;
+			min-height: 300px;
+			overflow-y: auto;
+			border: solid thin;
+		}
+		#image-select img {
+			width: 48%;
+		}
+		#container {
+			border-bottom: solid thin;
+			padding-bottom: 1ch;
+		}
+		#buttons {
+			text-align: center;
+			margin-top: 1ch;
+		}
+		#buttons button {
+			margin: 1ch;
+		}
+	</style>
+</head>
+<body>
+<form>
+
+<div id="container">
+<select id="wunsch_ws" name="workshopId" size="1">
+	<option disabled="" selected="" value=""> WS </option>
+	<option id="wsoption1" value="1">Ökonomie - Fiskalische und andere Götterdämmerungen</option>
+	<option id="wsoption2" value="2">Ökonomie - Patient Zero - der Indexpatient Deutsche Bank</option>
+	<option id="wsoption3" value="3">Ökonomie - Armageddon</option>
+	<option id="wsoption4" value="4">Ökonomie - Der Weg zur Hölle ist mit guten Vorsätzen gepflastert</option>
+	<option id="wsoption5" value="5">Recht und Gesetz - Staatsverluste?!</option>
+	<option id="wsoption6" value="6">Risikomanagement - Guter Rat – Notvorrat …</option>
+	<option id="wsoption7" value="7">Energy transitions - (in engl. Sprache)</option>
+	<option id="wsoption8" value="8">Wetter - Eine neue Normalität</option>
+	<option id="wsoption9" value="9">Geopolitics - Intersections (in engl. Sprache)</option>
+	<option id="wsoption10" value="10">Arbeit - Zukunft ohne Arbeitgeber?</option>
+	<option id="wsoption11" value="11">Identitäten - Heiße Luft</option>
+	<option id="wsoption12" value="12">Elite &amp; Demokratie - Rolle rückwärts</option>
+	<option id="wsoption13" value="13">Agriculture - Coffee shortage and other inconveniences (in engl. Sprache)</option>
+</select>
+
+<div id="left" class="column">
+<label>Jahr</label>
+<input name="jahr" id="jahr">
+</div><!--left-->
+
+<div id="center-l" class="column">
+<label>Headline</label>
+<input name="headline" id="headline">
+<label>Content</label>
+<textarea name="content"></textarea>
+</div><!--center-l-->
+
+<div id="center-r" class="column">
+<label>Bilder</label>
+<div id="image-select">
+</div><!--image-select-->
+<button>Upload</button>
+</div><!--center-r-->
+
+<div id="right" class="column">
+</div><!--right-->
+</div><!--container-->
+
+<div id="buttons">
+<button>New</button>
+<button>Send</button>
+</div><!--buttons-->
+
+</form>
+</body>
+</html>
+
