@@ -12,15 +12,20 @@
 			width: 100%;
 			margin-top: 2ch;
 		}
+		.column img {
+			max-width: 100%;
+			max-height: 200px;
+		}
 		/*.column select {
 			margin-top:0;
 		}*/
-		/*.column:first-child {
+		.column label:first-child {
 			margin-top: 0;
-		}*/
+		}
 		select#wunsch_ws {
-			width: 100px;
 			display: block;
+			width: 100px;
+			position: absolute;
 		}
 		textarea {
 			min-height: 48vh;
@@ -30,7 +35,7 @@
 			display: inline-block;
 			vertical-align: top;
 			margin: 1%;
-			height: 70vh;
+			height: 88vh;
 			margin-top: 2ch;
 		}
 		#left {
@@ -57,22 +62,20 @@
 			width: 48%;
 		}
 		#container {
-			border-bottom: solid thin;
-			padding-bottom: 1ch;
 		}
 		#buttons {
 			text-align: center;
-			margin-top: 1ch;
+			padding-bottom: 1ch;
+			border-bottom: solid thin;
 		}
 		#buttons button {
-			margin: 1ch;
+			margin: 0 1ch 0 1ch;
 		}
 	</style>
 </head>
 <body>
 <form>
 
-<div id="container">
 <select id="wunsch_ws" name="workshopId" size="1">
 	<option disabled="" selected="" value=""> WS </option>
 	<option id="wsoption1" value="1">Ökonomie - Fiskalische und andere Götterdämmerungen</option>
@@ -89,7 +92,12 @@
 	<option id="wsoption12" value="12">Elite &amp; Demokratie - Rolle rückwärts</option>
 	<option id="wsoption13" value="13">Agriculture - Coffee shortage and other inconveniences (in engl. Sprache)</option>
 </select>
+<div id="buttons">
+<button>New</button>
+<button>Send</button>
+</div><!--buttons-->
 
+<div id="container">
 <div id="left" class="column">
 <label>Jahr</label>
 <input name="jahr" id="jahr">
@@ -103,6 +111,8 @@
 </div><!--center-l-->
 
 <div id="center-r" class="column">
+<label>aktuelles Bild</label>
+<img src="" alt="">
 <label>Bilder</label>
 <div id="image-select">
 </div><!--image-select-->
@@ -112,11 +122,6 @@
 <div id="right" class="column">
 </div><!--right-->
 </div><!--container-->
-
-<div id="buttons">
-<button>New</button>
-<button>Send</button>
-</div><!--buttons-->
 
 </form>
 </body>
